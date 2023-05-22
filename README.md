@@ -61,13 +61,13 @@ A continuación, se presentan algunos gráficos para visualizar los resultados o
 
 #### Gráfico 1: Pérdida durante el entrenamiento
 
-![Gráfico 1](images/perdida_entrenamiento.png)
+![Gráfico 1](images/Entrenamiento.png)
 
 En este gráfico se muestra la evolución de la pérdida durante el entrenamiento del modelo a lo largo de las épocas. Se puede observar que la pérdida disminuye a medida que avanzan las épocas, lo que indica que el modelo está aprendiendo de manera efectiva.
 
 #### Gráfico 2: Pérdida durante la validación
 
-![Gráfico 2](images/perdida_validacion.png)
+![Gráfico 2](images/Validacion.png)
 
 En este gráfico se muestra la evolución de la pérdida durante la validación del modelo a lo largo de las épocas. También se puede observar una disminución en la pérdida, lo que indica que el modelo es capaz de generalizar correctamente y no está sobreajustando los datos de entrenamiento.
 
