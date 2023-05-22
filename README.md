@@ -2,6 +2,16 @@
 
 Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automático para predecir los precios de las viviendas en Zapotlán el Grande, Jalisco, México. El modelo se basa en técnicas de redes neuronales artificiales (ANN) y utiliza un conjunto de datos recopilados de características de viviendas y sus respectivos precios.
 
+## Contribuidores
+
+- Luis Fernando Chavez Jiménez ([GitHub](https://github.com/Tobiny))
+- Guillermo Moreno Rivera ([GitHub](https://github.com/Mim0518))
+- César Joel Ramirez Maciel ([GitHub](https://github.com/Cesar-Joel))
+
+## Repositorio
+
+El código fuente y los archivos relacionados se encuentran en el repositorio de GitHub de AFDEvelopment: [Repositorio de PPVZG-IA](https://github.com/afdevelopments/ppvzg-ia)
+
 ## Contenido del Repositorio
 
 - **datos_viviendas.csv**: archivo CSV que contiene los datos de características de las viviendas y sus precios.
@@ -12,12 +22,24 @@ Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automáti
 - **transformer.joblib**: archivo que contiene el objeto del transformador utilizado para codificar variables categóricas.
 - **requirements.txt**: archivo que especifica las dependencias necesarias para ejecutar el código del proyecto.
 
+## Requisitos de Instalación
+
+1. Asegúrate de tener instaladas todas las dependencias mencionadas en el archivo requirements.txt. Puedes instalarlas ejecutando el siguiente comando:
+
+```pip install -r requirements.txt```
+
 ## Instrucciones de Uso
 
-1. Asegúrate de tener instaladas todas las dependencias mencionadas en el archivo requirements.txt.
-2. Ejecuta el script entrenamiento.py para entrenar el modelo. Este proceso puede llevar un tiempo dependiendo del tamaño del conjunto de datos.
-3. Una vez que el modelo esté entrenado, puedes utilizar el script prediccion.py para hacer predicciones de precios de vivienda.
-4. El modelo entrenado se guarda en el archivo modelo_viviendas.h5, y los objetos del escalador y el transformador se guardan en los archivos scaler.joblib y transformer.joblib, respectivamente.
+1. Ejecuta el script `entrenamiento.py` para entrenar el modelo. Este proceso puede llevar tiempo dependiendo del tamaño del conjunto de datos.
+
+```python entrenamiento.py```
+
+2. Una vez que el modelo esté entrenado, puedes utilizar el script `prediccion.py` para hacer predicciones de precios de vivienda.
+
+```python prediccion.py```
+
+
+3. El modelo entrenado se guarda en el archivo `modelo_viviendas.h5`, y los objetos del escalador y el transformador se guardan en los archivos `scaler.joblib` y `transformer.joblib`, respectivamente.
 
 ## Detalles de la Optimización de Hiperparámetros
 
@@ -37,17 +59,17 @@ El modelo de redes neuronales artificiales entrenado mostró resultados prometed
 
 A continuación, se presentan algunos gráficos para visualizar los resultados obtenidos:
 
-#### Gráfico 1: Comparación entre los precios reales y los precios predichos
+#### Gráfico 1: Pérdida durante el entrenamiento
 
-![Gráfico 1](ruta/imagen1.png)
+![Gráfico 1](images/perdida_entrenamiento.png)
 
-En este gráfico se puede observar la comparación entre los precios reales de las viviendas y los precios predichos por el modelo. Se puede apreciar una correlación positiva entre ambos, lo que indica que el modelo es capaz de captar las tendencias generales de los precios.
+En este gráfico se muestra la evolución de la pérdida durante el entrenamiento del modelo a lo largo de las épocas. Se puede observar que la pérdida disminuye a medida que avanzan las épocas, lo que indica que el modelo está aprendiendo de manera efectiva.
 
-#### Gráfico 2: Distribución de los residuos
+#### Gráfico 2: Pérdida durante la validación
 
-![Gráfico 2](ruta/imagen2.png)
+![Gráfico 2](images/perdida_validacion.png)
 
-Este gráfico muestra la distribución de los residuos del modelo, es decir, la diferencia entre los precios reales y los precios predichos. Se espera que los residuos sigan una distribución normal alrededor de cero, lo que indicaría que el modelo está haciendo predicciones precisas y no hay sesgo sistemático.
+En este gráfico se muestra la evolución de la pérdida durante la validación del modelo a lo largo de las épocas. También se puede observar una disminución en la pérdida, lo que indica que el modelo es capaz de generalizar correctamente y no está sobreajustando los datos de entrenamiento.
 
 ## Contribuciones y Mejoras Futuras
 
