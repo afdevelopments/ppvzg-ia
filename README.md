@@ -71,6 +71,36 @@ En este gráfico se muestra la evolución de la pérdida durante el entrenamient
 
 En este gráfico se muestra la evolución de la pérdida durante la validación del modelo a lo largo de las épocas. También se puede observar una disminución en la pérdida, lo que indica que el modelo es capaz de generalizar correctamente y no está sobreajustando los datos de entrenamiento.
 
+## Análisis Estadístico con OLS
+
+### Visión General
+
+Se realizó un análisis estadístico detallado utilizando la metodología de Mínimos Cuadrados Ordinarios (OLS) para complementar nuestro modelo de redes neuronales. Este análisis nos ayudó a entender la relación entre las características de las viviendas y sus precios en Zapotlán el Grande.
+
+### Resultados Clave del Análisis OLS
+
+- **R-cuadrado (R²)**: 0.843
+  - Indica que aproximadamente el 84.3% de la variabilidad en el precio de las viviendas se puede explicar mediante las variables independientes utilizadas en el modelo.
+- **Coeficientes**:
+  - Cada coeficiente refleja el cambio esperado en el precio (logarítmico) de la vivienda por cada unidad de cambio en la variable correspondiente.
+  - Los coeficientes varían en magnitud y dirección, reflejando la influencia única de cada característica.
+- **P-valor**:
+  - Los p-valores asociados con cada coeficiente proporcionan una medida de la significancia estadística de las características.
+  - Un p-valor bajo (generalmente < 0.05) sugiere que una característica es un predictor significativo del precio.
+- **Intervalos de Confianza**:
+  - Los intervalos de confianza para cada coeficiente proporcionan un rango dentro del cual podemos estar razonablemente seguros de que se encuentra el verdadero valor del coeficiente.
+
+### Interpretación y Conclusiones
+
+- El modelo OLS reveló varias características significativas que influyen en los precios de las viviendas. Por ejemplo, `x18` mostró una asociación positiva significativa con el precio.
+- La multicolinealidad detectada sugiere que algunas variables independientes están altamente correlacionadas, lo que podría afectar la interpretación de los coeficientes individuales.
+- A pesar de la multicolinealidad, el alto R-cuadrado indica un buen ajuste general del modelo a los datos.
+
+### Importancia del Análisis OLS
+
+Este análisis OLS proporciona una perspectiva valiosa sobre la dinámica del mercado inmobiliario en Zapotlán el Grande, complementando los resultados obtenidos a través del modelo de redes neuronales. Nos ayuda a entender mejor cuáles características de las viviendas tienen mayor impacto en sus precios y cómo se pueden utilizar estos insights para futuras investigaciones y desarrollos en el campo de la predicción de precios inmobiliarios.
+
+
 ## Contribuciones y Mejoras Futuras
 
 Este proyecto contribuye al campo de la predicción de precios de vivienda utilizando técnicas de aprendizaje automático. Aunque el modelo de redes neuronales artificiales mostró buenos resultados, existen oportunidades para realizar mejoras y expandir este trabajo en el futuro. Algunas posibles mejoras incluyen:

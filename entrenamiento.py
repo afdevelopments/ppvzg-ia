@@ -10,6 +10,8 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.wrappers.scikit_learn import KerasRegressor
 from sklearn.model_selection import GridSearchCV
 from joblib import dump
+import statsmodels.api as sm
+
 
 data = pd.read_csv('datos_viviendas.csv')
 
@@ -82,3 +84,14 @@ if test_mse / np.mean(y_test) < 0.1:
     best_model.save('modelo_viviendas.h5')
 else:
     print("El margen de error es muy grande, necesitamos mejorar el modelo.")
+
+
+
+# Preparación de los datos para el análisis OLS
+X_train_Sm = sm.add_constant(X_train)
+
+# Crear y entrenar el modelo OLS con los datos de entrenamiento
+ls = sm.OLS(y_train, X_train_Sm).fit()
+
+# Imprimir el resumen del modelo
+print(ls.summary())
